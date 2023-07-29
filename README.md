@@ -1,6 +1,6 @@
 # foscam-bash
 
-![App Icon](icon.png)
+![App Icon](web/icon.png)
 
 Loosely derived from my [kunacam-php](https://github.com/codepoet80/kunacam-php) project, this is a super quick-and-dirty solution for publishing still frames from Foscam HD web cams to a webpage.
 
