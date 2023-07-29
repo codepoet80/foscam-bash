@@ -45,7 +45,7 @@ include("config.php");
             <div class="column">
                 <p align="center">
                     <span class="camera-name"><?php echo $cam_name; ?></span><br>
-                    <img class="camera" id="<?php echo $cam_id; ?>" onload="imgReady('<?php echo $cam_id ?>');" title="<?php echo $cam_id; ?>" src="<?php echo $this_img; ?>">
+                    <img class="camera" id="<?php echo $cam_id; ?>" onload="imgReady('<?php echo $cam_id ?>');" title="<?php echo $cam_name; ?>" src="<?php echo $this_img; ?>">
                     <img class="spinner" id="spinner-<?php echo $cam_id ?>" src="spinner.gif">
                 </p>
 
