@@ -19,7 +19,7 @@ include("config.php");
                     var cam = document.getElementById(id);
                     var spinner = document.getElementById("spinner-" + id);
                     var d=new Date();
-                    cam.src = cam.title + ".jpg?time=" + d.getTime();
+                    cam.src = cam.id + ".jpg?time=" + d.getTime();
                     spinner.style.display = "inline";
                 }, rate, id
             )

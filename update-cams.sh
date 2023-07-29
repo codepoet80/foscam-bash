@@ -8,5 +8,6 @@ camLength=${#cams[@]}
 for (( i=0; i<${camLength}; i++ ));
 do
 	echo "Updating Camera #$i..."
-	${cams[$i]} $SCRIPT_DIR/web/cam-$i.jpg
+	${cams[$i]} $SCRIPT_DIR/web/temp-$i.jpg
+	mv $SCRIPT_DIR/web/temp-$i.jpg $SCRIPT_DIR/web/cam-$i.jpg
 done
