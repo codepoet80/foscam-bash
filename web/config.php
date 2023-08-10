@@ -7,5 +7,8 @@ $config=array(
 //		"Living Room Camera",
 //		"Garage Cam",
 //	)
+//	'cam_links => array(
+//		"http://<PATHTOYOURCAMERAWEBPAGE">,	//optional, make the image clickable
+//		""					//if you use this array, it must be the same size as the cam_names array, use empty strings if needed
 );
 ?>
