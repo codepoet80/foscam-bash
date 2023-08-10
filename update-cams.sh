@@ -8,9 +8,10 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 camLength=${#cams[@]}
 for (( i=0; i<${camLength}; i++ ));
 do
-        echo "Updating Camera #$i..."
-        outFile=web/cam-$i.jpg
-        command=${cams[$i]}
-        command=${command/CAMIMG/"$outFile"}
-        $command
+	tempFile=$SCRIPT_DIR/temp-$i.jpg
+	outFile=$SCRIPT_DIR/web/cam-$i.jpg
+	command=${cams[$i]}
+	command=${command/CAMIMG/"$tempFile"}
+	$command
+ 	mv $tempFile $outFile
 done
