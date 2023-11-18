@@ -28,6 +28,7 @@ include("config.php");
     </head>
     <body>
         <h1><img src="icon.png"><br>Foscam Cameras</h1>
+
         <div class="row">
         <?php
         $files = glob('*.{jpg}', GLOB_BRACE);
@@ -44,8 +45,14 @@ include("config.php");
             ?>
             <div class="column">
                 <p align="center">
-                    <span class="camera-name"><?php echo $cam_name; ?></span><br>
+                    <span class="camera-name"><?php echo $cam_name; ?></span>
+		    <?php
+		    if (isset($config['cam_links']) && $config['cam_links'][$c] != "") {
+		    ?>
+		    <a href="<?php echo $config['cam_links'][$c]?>">
+		    <?php } else { echo "<a>"; } ?>
                     <img class="camera" id="<?php echo $cam_id; ?>" onload="imgReady('<?php echo $cam_id ?>');" title="<?php echo $cam_name; ?>" src="<?php echo $this_img . '?time=' . hrtime(true); ?>">
+		    </a>
                     <img class="spinner" id="spinner-<?php echo $cam_id ?>" src="spinner.gif">
                 </p>
 
@@ -54,6 +61,5 @@ include("config.php");
             $c++;
         }
         ?>
-        </div>
     </body>
 </html>
