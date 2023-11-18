@@ -23,9 +23,11 @@ Pretty much any browser in the past 10 years. Tested on Chrome and Firefox. Also
 
 - Clone this code somewhere on your system
 
-- Modify `cams` array in `update-cams.sh` to point to the RTSP credentials for your Foscam HD cameras -- one camera for each line.
+- Copy `config-example.sh` to `config.sh`
 
-- Optionally modify `web\config.php` to your liking.
+- Modify the `cams` array in `config.sh` to point to the ffmpeg (for RTSP) or wget command for each of your cameras -- one camera for each line.
+
+- Optionally modify `web\config.php` to your liking (set camera names and web update rate)
 
 - Ensure `update-cams.sh` is executable and works when you execute it manually.
 
