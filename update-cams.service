@@ -1,0 +1,12 @@
+[Unit]
+Description=Camera Update Service
+
+[Service]
+Type=simple
+ExecStart=/home/pi/foscam-bash/update-cams.sh
+Restart=always
+RestartSec=30
+StartLimitInterval=30
+
+[Install]
+WantedBy=multi-user.target
